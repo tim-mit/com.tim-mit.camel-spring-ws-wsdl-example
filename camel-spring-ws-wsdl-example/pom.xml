@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.tim-mit</groupId>
+    <artifactId>camel-spring-ws-wsdl-example</artifactId>
+    <version>1.0-INITIAL</version>
+    
+    <properties>
+        <camel.version>2.11.0</camel.version>
+        <slf4j.version>1.7.5</slf4j.version>
+    </properties>
+    <dependencies>
+        <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+          <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-core</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-spring</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-spring-ws</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+              <groupId>org.apache.camel</groupId>
+              <artifactId>camel-maven-plugin</artifactId>
+              <version>${camel.version}</version>
+              <configuration>
+                <applicationContextUri>META-INF/spring/camel-context.xml</applicationContextUri>
+              </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
